@@ -9,15 +9,15 @@ export class DatabaseConnectionService implements TypeOrmOptionsFactory {
     return {
       name: 'default',
       type: 'mysql',
-      username: process.env.SECRET,
-      host: process.env.DB_HOST,
+      username: 'root',
+      host: 'localhost',
       port: 3306,
-      password: process.env.DB_PASSWORD,
+      password: '',
       database: 'nestjs-csv-api',
       synchronize: false,
       dropSchema: false,
       logging: true,
-      entities: []
+      entities: [UserEntity]
     };
   }
 }

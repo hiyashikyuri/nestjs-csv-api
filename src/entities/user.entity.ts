@@ -16,7 +16,7 @@ export class UserEntity extends AbstractEntity {
   @Column({default: null, nullable: true})
   company: string;
   
-  @Column()
+  @Column({default: null, nullable: true})
   industry: string;
   
   @Column()
