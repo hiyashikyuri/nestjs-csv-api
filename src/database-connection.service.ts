@@ -17,7 +17,12 @@ export class DatabaseConnectionService implements TypeOrmOptionsFactory {
       synchronize: false,
       dropSchema: false,
       logging: true,
-      entities: [UserEntity]
+      entities: [
+        "src/entities/*.ts"
+      ],
+      migrations: [
+        "src/db/migrations/*.ts"
+      ],
     };
   }
 }
